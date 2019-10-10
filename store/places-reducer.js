@@ -1,4 +1,4 @@
-import { ADD_PLACE } from './places-action';
+import { ADD_PLACE, GET_PLACES} from './places-action';
 import Place from '../models/place';
 
 const initialState = {
@@ -12,6 +12,7 @@ export default (state = initialState, action) => {
       return {
           places: state.places.concat(newPlace)
       }
+
     default:
       return state;
   }
