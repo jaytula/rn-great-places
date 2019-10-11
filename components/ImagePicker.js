@@ -34,7 +34,6 @@ const ImgPicker = props => {
       quality: 0.5
     });
 
-    console.log(image.uri);
     setPickedImage(image.uri);
   };
 
@@ -44,7 +43,7 @@ const ImgPicker = props => {
         {!pickedImage ? (
           <Text>No image picked yet.</Text>
         ) : (
-          <Image source={{ uri: pickedImage }} />
+          <Image style={styles.image} source={{ uri: pickedImage }} />
         )}
       </View>
       <Button
@@ -68,6 +67,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderColor: '#ccc',
     borderWidth: 1
+  },
+  image: {
+    height: '100%',
+    width: '100%'
   }
 });
 
